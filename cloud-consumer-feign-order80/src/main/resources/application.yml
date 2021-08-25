@@ -1,0 +1,20 @@
+server:
+  port: 80
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka, http://eureka7002.com:7002/eureka
+
+ribbon:
+  #指的是建立连接所用的时间，使用于网络正常的情况，两端连接所用时间，
+  #即调用服务超时
+  ReadTimeout:  5000
+  #指建立连接后从服务器读取可用资源所用的时间
+  ConnectTimeout: 5000
+#日志
+logging:
+  level:
+    com.atguigu.springcloud.service.PaymentFeignService: debug
+
+
